@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+    <script src="js/preloader.js" defer></script>
+    <script src="js/index.js" defer></script>
+
+    <!-- <script src="js/cookies.js" defer></script> -->
+
+    <!-- <script src="js/validation.js" defer></script>
+    <script type="module" src="js/phoneMask.js" defer></script> -->
+
+    <script type="module" src="js/smothScroll.js" defer></script>
+
+    <title>StaffJet</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- <div id="js-pop-up" class="pop-up">
+        <div class="pop-up__inner">
+          <div class="pop-up__icon">
+            <img src="./images/icons/pop-up/success.svg" />
+          </div>
+          <div class="pop-up__title">
+            Заявка <span id="color-blue">принята!</span>
+          </div>
+          <div class="pop-up__text">
+            Спасибо за вашу заявку. Мы обработаем её и свяжемся с вами в
+            ближайшее время.
+          </div>
+
+          <button id="js-close-pop-up" class="button _arrow-animate">
+            <div class="button__text">На главную</div>
+            <div class="button__icon">
+              <img src="./images/icons/arrow.svg" alt="Arrow" />
+            </div>
+          </button>
+        </div>
+      </div> -->
+
+      <!-- <div id="cookies-banner" class="cookies">
+        <div class="cookies__title">Мы используем cookies 🍪</div>
+        <div class="cookies__text">
+          Продолжая пользоваться сайтом, вы соглашаетесь с нашей
+          <a href="/privacy-policy.html">политикой обработки данных.</a>
+        </div>
+        <button id="accept-cookies" class="cookies__button">Хорошо</button>
+      </div> -->
+
+      <header id="js-header" class="header">
+        <div class="header__inner _container">
+          <a href="/">
+            <img
+              src="./images/logo/logo-color.svg"
+              alt="Logo"
+              class="header__logo"
+            />
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a
+                  target="_blank"
+                  href="https://staffjet.ru/#about-us"
+                  class="header__nav-link"
+                  >О нас</a
+                >
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-link">Вебмастерам</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-link">Этапы работы</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a
+                  target="_blank"
+                  href="https://t.me/staffjet_account_manager"
+                  class="header__nav-link"
+                  >Написать в Telegram</a
+                >
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-link">Оставить заявку</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- burger -->
+          <div id="js-burger" class="burger">
+            <div class="burger__inner">
+              <span></span>
+            </div>
+          </div>
+
+          <nav id="js-burger-nav" class="burger-nav">
+            <div class="burger-nav__header">
+              <img src="./images/logo/logo-white.svg" />
+            </div>
+            <div class="burger-nav__items">
+              <ul class="burger-nav__list">
+                <li>
+                  <a
+                    class="burger-nav__link js-hide-fixed-header"
+                    href="#about-us"
+                    >О нас <span>(01)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="burger-nav__link js-hide-fixed-header"
+                    href="#agency"
+                    >Рекламное агентство <span>(02)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    class="burger-nav__link"
+                    href="https://cpa.staffjet.ru/"
+                    >WEB-мастерам <span>(03)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="burger-nav__link js-hide-fixed-header"
+                    href="#call-center"
+                    >Контактный центр <span>(04)</span></a
+                  >
+                </li>
+                <li>
+                  <a class="burger-nav__link js-hide-fixed-header" href="#cpa"
+                    >CPA-сеть <span>(05)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    class="burger-nav__link"
+                    href="https://staffjet.ru/client/user/login/?next=/client/"
+                    >Staffjet ПО <span>(06)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="burger-nav__link js-hide-fixed-header"
+                    href="#contacts"
+                    >Оставить заявку <span>(07)</span></a
+                  >
+                </li>
+              </ul>
+
+              <img
+                class="burger-nav__bg-img"
+                src="./images/logo/burger-bg-logo.png"
+              />
+            </div>
+
+            <div class="burger-nav__footer">
+              © 2018 — 2025 Staffjet. Все права защищены.
+            </div>
+          </nav>
+        </div>
+        <div class="fade-in-hiro-header"></div>
+      </header>
+
+      <main class="main">
+        <section class="staffjet">
+          <div class="staffjet__inner">
+            <div class="_container">
+              <!-- TITLE BLOCK -->
+              <div class="title-block -900 fade-in-hiro-title">
+                <div class="section-name _h1 fade-in-hiro-sub-title">
+                  <span class="section-name__text">Staffjet</span>
+                </div>
+
+                <h1 class="section-title _h1">
+                  <span class="_color-blue">HR CPA сеть</span> <br />
+                  с проверенными офферами <br />
+                  и стабильным <span class="_color-orange">доходом</span>
+                </h1>
+              </div>
+
+              <div class="staffjet__content">
+                <div class="staffjet__content_inner">
+                  <p class="staffjet__content_text-block fade-in-hiro-text">
+                    Обеспечим эффективное закрытие ваших вакансий за счет нашего
+                    проверенного трафика.
+                  </p>
+                  <!-- BUTTON COMPONENT -->
+                  <div class="staffjet__button fade-in-hiro-button">
+                    <a href="#contacts" class="button _arrow-animate">
+                      <div class="button__text">Оставить заявку</div>
+                      <div class="button__icon">
+                        <img src="./images/icons/arrow.svg" alt="Arrow" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- bottom -->
+            <div class="staffjet__footer _container">
+              <div class="staffjet__footer_item">(Scroll)</div>
+              <div class="staffjet__footer_item">© 2018 — 2025</div>
+              <div class="staffjet__footer_item">
+                <span id="js-timezone"></span> (GMT +3)
+              </div>
+            </div>
+
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./images/background/hiro-section/hiro-section-bg-mobile.png
+                "
+              />
+              <source
+                media="(max-width: 840px)"
+                srcset="
+                  ./images/background/hiro-section/hiro-section-bg-tablet.png
+                "
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcset="
+                  ./images/background/hiro-section/hiro-section-bg-1024.png
+                "
+              />
+              <img
+                class="staffjet__bg-img fade-in-hiro-bg"
+                src="./images/background/hiro-section/hiro-section-bg.png"
+                alt="Фоновое изображение"
+              />
+            </picture>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="_container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <a href="/">
+                <img src="./images/logo/logo-white.svg" alt="Logo" />
+              </a>
+              <p class="footer__top-left_text">
+                Работайте с качественными офферами и получайте доход за целевые
+                действия без лишних шагов.
+              </p>
+            </div>
+            <div class="footer__top-rigth">
+              <!-- BLOCK -->
+              <div class="footer-nav-block">
+                <div class="footer-nav-block__subtitle">Навигация</div>
+                <ul class="footer-nav-block__list">
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://staffjet.ru/#about-us"
+                      class="footer-nav-block__link"
+                      >О нас</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="footer-nav-block__link js-hide-fixed-header"
+                      >Вебмастерам</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="footer-nav-block__link js-hide-fixed-header"
+                      >Этапы работы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="footer-nav-block__link js-hide-fixed-header"
+                      >Контакты</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="footer-nav-block__link">Войти</a>
+                  </li>
+                  <li>
+                    <a href="#" class="footer-nav-block__link">Клиентам</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- BLOCK -->
+              <div class="footer-nav-block">
+                <div class="footer-nav-block__subtitle">Контакты</div>
+                <ul class="footer-nav-block__list">
+                  <li>
+                    <a
+                      href="mailto:info@staffjet.ru"
+                      class="footer-nav-block__link"
+                      >Email</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://t.me/staffjet_account_manager"
+                      class="footer-nav-block__link"
+                      >Telegram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+79518896673" class="footer-nav-block__link"
+                      >+7 (951) 889 66 73</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#contacts"
+                      class="footer-nav-block__link js-hide-fixed-header"
+                      >Оставить заявку</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <img
+              class="footer__bottom-img"
+              src="./images/logo/footer-bg-logo.png"
+            />
+
+            <div class="footer__bottom-content">
+              <div class="footer__bottom-copyright">
+                © 2018 — 2025 Staffjet. Все права защищены.
+              </div>
+              <div class="footer__bottom-legal">
+                <a
+                  target="_blank"
+                  href="https://staffjet.ru/privacy-policy.html"
+                  class="footer__bottom-legal-item"
+                  >Политика конфиденциальности</a
+                >
+                <a
+                  target="_blank"
+                  href="https://staffjet.ru/user-agreement.html"
+                  class="footer__bottom-legal-item"
+                  >Пользовательское Соглашение</a
+                >
+                <a
+                  target="_blank"
+                  href="https://staffjet.ru/software-information.html"
+                  class="footer__bottom-legal-item"
+                  >Необходимые сведения о ПО</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

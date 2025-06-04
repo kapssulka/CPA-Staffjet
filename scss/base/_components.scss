@@ -1,0 +1,275 @@
+// SECTION NAME
+.section-name {
+  display: inline-block;
+
+  padding: 10px 16px;
+  border: 1px solid $black;
+  border-radius: 800px;
+
+  margin-bottom: 38px;
+
+  @media (max-width: 840px) {
+    padding: 8px 12px;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    display: block;
+    position: relative;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    padding-left: 16px;
+    @media (max-width: 840px) {
+      font-size: 16px;
+    }
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+
+      background-color: $black;
+    }
+  }
+}
+
+// SECTION TITLE
+.section-title {
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: -2%;
+
+  @media (max-width: 840px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+
+  &._h1 {
+    font-size: 80px;
+    line-height: 110.00000000000001%;
+
+    @media (max-width: 1200px) {
+      font-size: 66px;
+    }
+
+    @media (max-width: 840px) {
+      font-size: 44px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 36px;
+    }
+  }
+
+  & > * {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  ._color-blue {
+    color: $blue;
+  }
+  ._color-orange {
+    color: $orange;
+  }
+  ._color-opacity {
+    opacity: 25%;
+  }
+}
+
+// TITLE BLOCK
+.title-block {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// BUTTON
+
+.button {
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  & > * {
+    transition: inherit;
+  }
+
+  // Стили для отключённой кнопки
+  &:disabled {
+    pointer-events: none;
+
+    .button__text,
+    .button__icon {
+      background-color: $black; // Цвет для disabled
+    }
+
+    // Полностью убираем эффекты hover
+    &._arrow-animate:hover .button__icon img,
+    &._download-animate:hover .button__icon img {
+      transform: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover &__text,
+    &:hover &__icon {
+      background-color: $blue-hover;
+    }
+
+    &._arrow-animate:hover .button__icon img {
+      transform: rotate(-45deg);
+    }
+    &._download-animate:hover .button__icon img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    height: 52px;
+
+    padding: 0 24px;
+
+    border-radius: 8px;
+
+    color: #fff;
+    background-color: $blue;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 8px;
+
+    background-color: $blue;
+
+    img {
+      transition: 0.1s ease-in-out;
+    }
+  }
+}
+
+// COOCKIES
+
+.cookies {
+  display: none;
+  position: fixed;
+
+  max-width: 400px;
+  width: 100%;
+
+  left: 40px;
+  bottom: 60px;
+  z-index: 50;
+
+  padding: 20px 24px;
+
+  border-radius: 8px;
+  background-color: #fff;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 600px) {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  @media (max-width: 440px) {
+    left: 0;
+    bottom: 0;
+
+    width: 100vw;
+    max-width: 100%;
+
+    padding: 20px 24px 42px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    margin-bottom: 16px;
+
+    a {
+      font-weight: 500;
+
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    height: 52px;
+
+    padding: 0 24px;
+    border-radius: 8px;
+
+    color: #fff;
+    background-color: $blue;
+
+    transition: all 0.2s ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $blue-hover;
+      }
+    }
+  }
+}

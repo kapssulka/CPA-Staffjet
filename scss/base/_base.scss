@@ -1,0 +1,63 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+
+  color: $black;
+
+  background-color: $white-bg;
+
+  a {
+    color: inherit;
+  }
+
+  &._hidden {
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $black; /* Цвет ползунка */
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d2d2d2; /* Цвет фона */
+  }
+}
+
+._container {
+  max-width: 1920px;
+  padding: 0 80px;
+
+  margin: 0 auto;
+
+  @media (max-width: 1440px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 auto;
+}
