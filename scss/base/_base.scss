@@ -61,3 +61,13 @@ body {
 main {
   flex: 1 1 auto;
 }
+
+._color-blue {
+  color: $blue;
+}
+._color-orange {
+  color: $orange;
+}
+._color-opacity {
+  opacity: 25%;
+}

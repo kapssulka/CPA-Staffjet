@@ -1,5 +1,5 @@
 .staffjet {
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   @media (max-width: 1024px) {
     margin-bottom: 0;
   }
@@ -14,6 +14,9 @@
     @media (max-width: 600px) {
       padding-top: calc(112px + 110px);
       margin-top: -110px;
+    }
+    @media (max-width: 480px) {
+      padding-bottom: 80px;
     }
   }
 
