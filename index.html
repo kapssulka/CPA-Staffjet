@@ -19,8 +19,8 @@
 
     <!-- <script src="js/cookies.js" defer></script> -->
 
-    <!-- <script src="js/validation.js" defer></script>
-    <script type="module" src="js/phoneMask.js" defer></script> -->
+    <script src="js/validation.js" defer></script>
+    <script type="module" src="js/phoneMask.js" defer></script>
 
     <script type="module" src="js/smothScroll.js" defer></script>
 
@@ -743,6 +743,199 @@
               alt="Фоновое изображение"
             />
           </picture>
+        </section>
+
+        <section class="contacts">
+          <div class="contacts__inner _container">
+            <!-- TITLE BLOCK -->
+            <div class="title-block -900 fade-in-hiro-title">
+              <div class="section-name fade-in-hiro-sub-title">
+                <span class="section-name__text">Контакты</span>
+              </div>
+
+              <h2 class="section-title">
+                <span class="_color-blue">Оставьте заявку</span> — мы свяжемся с
+                вами, <br />
+                расскажем подробнее и ответим на все вопросы.
+              </h2>
+            </div>
+
+            <div class="contacts__content">
+              <div class="contacts__partner partner-contacs">
+                <h3 class="partner-contacs__title">
+                  Становись партнёром <br />
+                  <span class="partner-contacs__title_help-wrapper">
+                    Staffjet <img src="./images/contacts/icons/logo-blue.svg"
+                  /></span>
+
+                  <br />и зарабатывай больше!
+                </h3>
+                <p class="partner-contacs__text">
+                  Работай с надёжной HR CPA-сетью, <br />
+                  получай высокий доход <br />
+                  и поддержку на каждом этапе.
+                </p>
+
+                <img
+                  class="partner-contacs__bg-img"
+                  src="./images/contacts/partner.jpg"
+                  alt="Молодой парень с кудрявыми волосами в розовой футболке улыбается, глядя на смартфон в руках"
+                />
+              </div>
+
+              <div class="contacts__form-wrapper">
+                <div class="contacts__links">
+                  <div class="contacts__link-item">
+                    <div class="contacts__link-item-title">Telegram</div>
+                    <a
+                      target="_blank"
+                      href="https://t.me/staffjet_account_manager"
+                      class="contacts__link-item-link"
+                      >Написать в Telegram</a
+                    >
+                  </div>
+
+                  <div class="contacts__link-item">
+                    <div class="contacts__link-item-title">Email</div>
+                    <a
+                      href="mailto:info@staffjet.ru"
+                      class="contacts__link-item-link"
+                      >info@staffjet.ru</a
+                    >
+                  </div>
+
+                  <div class="contacts__link-item">
+                    <div class="contacts__link-item-title">Телефон</div>
+                    <a href="tel:+79518896673" class="contacts__link-item-link"
+                      >+7 (951) 889 66 73</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contacts__form-block">
+                  <div class="contacts__form-subtitle">Оставьте заявку</div>
+
+                  <form id="js-form" action="#" class="form">
+                    <!-- NAME -->
+                    <div class="input-form js-required-wrapper-input">
+                      <input
+                        class="input-form__input"
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder=" "
+                        autocomplete="name"
+                        required
+                      />
+
+                      <label class="input-form__placeholder" for="name">
+                        <span
+                          ><span id="brackets">[</span>Ваше имя<span
+                            id="brackets"
+                            >]</span
+                          ><span id="required">*</span></span
+                        >
+                      </label>
+
+                      <div id="js-form-error" class="input-form__error">
+                        Заполните поле
+                      </div>
+                    </div>
+                    <!-- TEL -->
+                    <div class="input-form js-required-wrapper-input">
+                      <input
+                        class="input-form__input"
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        placeholder=" "
+                        autocomplete="tel"
+                        required
+                      />
+
+                      <label class="input-form__placeholder" for="tel">
+                        <span
+                          ><span id="brackets">[</span>Номер телефона<span
+                            id="brackets"
+                            >]</span
+                          ><span id="required">*</span></span
+                        >
+                      </label>
+
+                      <div id="js-form-error" class="input-form__error">
+                        Заполните поле
+                      </div>
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="input-form js-required-wrapper-input">
+                      <input
+                        class="input-form__input"
+                        id="telegram"
+                        name="telegram"
+                        type="telegram"
+                        placeholder=" "
+                        autocomplete="telegram"
+                        required
+                      />
+
+                      <label class="input-form__placeholder" for="telegram">
+                        <span
+                          ><span id="brackets">[</span>Ваш Телеграм<span
+                            id="brackets"
+                            >]</span
+                          ><span id="required">*</span></span
+                        >
+                      </label>
+
+                      <div id="js-form-error" class="input-form__error">
+                        Заполните поле
+                      </div>
+                    </div>
+
+                    <!-- CHECKBOX -->
+                    <label
+                      class="custom-checkbox js-required-wrapper-input"
+                      for="privacy_policy"
+                    >
+                      <input
+                        name="privacy_policy"
+                        id="privacy_policy"
+                        type="checkbox"
+                        class="custom-checkbox__input required"
+                      />
+                      <span class="custom-checkbox__box">
+                        <img src="./images/icons/form/checkbox.svg" />
+                      </span>
+                      <div class="custom-checkbox__text">
+                        Я даю согласие на
+                        <a
+                          target="_blank"
+                          class="custom-checkbox__link"
+                          href="https://staffjet.ru/privacy-policy.html"
+                          >обработку моих персональных данных</a
+                        >, включая их сбор, хранение и использование в
+                        соответствии с действующим законодательством.
+                      </div>
+                    </label>
+
+                    <!-- BUTTON COMPONENT -->
+                    <div id="js-form-btn" class="form__button">
+                      <button
+                        disabled
+                        type="submit"
+                        class="button _arrow-animate"
+                      >
+                        <div class="button__text">Отправить</div>
+                        <div class="button__icon">
+                          <img src="./images/icons/arrow.svg" alt="Arrow" />
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
