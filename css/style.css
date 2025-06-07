@@ -1732,7 +1732,7 @@ main {
 }
 @media (max-width: 480px) {
   .development-phase {
-    padding-top: 80px;
+    padding-top: 80px 0;
   }
 }
 .development-phase__bg-img {
@@ -1919,6 +1919,29 @@ main {
   }
 }
 
+.contacts {
+  position: relative;
+  padding: 100px 0;
+}
+@media (max-width: 480px) {
+  .contacts {
+    padding: 80px 0;
+  }
+}
+.contacts__bg-img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: 100% 100%;
+     object-fit: 100% 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgb(0, 0, 0)), color-stop(70%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0));
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgb(0, 0, 0)), color-stop(70%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0));
+}
 .contacts__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2530,4 +2553,120 @@ main {
   .footer-nav-block__link:hover:before {
     height: 2px;
   }
+}
+
+.pop-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 90;
+  background-color: rgba(30, 30, 30, 0.6);
+  opacity: 0;
+  visibility: 0;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.pop-up._active {
+  opacity: 1;
+  visibility: visible;
+}
+.pop-up._active .pop-up__inner::before {
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+}
+@media (max-width: 600px) {
+  .pop-up._active .pop-up__inner::before {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+.pop-up__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 24px;
+  width: 440px;
+  padding: 60px 20px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+@media (max-width: 600px) {
+  .pop-up__inner {
+    width: 353px;
+    padding: 60px 15px;
+  }
+}
+.pop-up__inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #b6b6b6;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+@media (max-width: 600px) {
+  .pop-up__inner::before {
+    width: 353px;
+  }
+}
+.pop-up__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3253ed;
+  -webkit-box-shadow: 0px 0px 0px 10px rgba(50, 83, 237, 0.1490196078);
+          box-shadow: 0px 0px 0px 10px rgba(50, 83, 237, 0.1490196078);
+}
+.pop-up__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 110%;
+  letter-spacing: -2%;
+}
+.pop-up__title #color-blue {
+  color: #3253ed;
+}
+.pop-up__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #787878;
+  max-width: 345px;
 }

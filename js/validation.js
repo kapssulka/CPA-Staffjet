@@ -7,26 +7,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     const name = form.querySelector("#name");
     const tel = form.querySelector("#tel");
-    const email = form.querySelector("#email");
+    const telegram = form.querySelector("#telegram");
     const checkbox = form.querySelector("#privacy_policy");
-
-    const comment = form.querySelector("#comment");
 
     const popup = document.getElementById("js-pop-up");
 
     // get value
     let nameValue = name.value;
     let telValue = tel.value;
-    let emailValue = email.value;
+    let telegramValue = telegram.value;
     let checkboxlValue = checkbox.checked;
 
     formButtonWrapper.addEventListener("click", async () => {
       let isValidateName = validation(name, nameValue, "name");
       let isValidateTel = validation(tel, telValue, "tel");
-      let isValidateEmail = validation(email, emailValue, "email");
+      let isValidateTelegram = validation(telegram, telegramValue, "telegram");
       let isChecked = validation(checkbox, checkboxlValue, "checkbox");
 
-      if (isValidateName && isValidateTel && isValidateEmail && isChecked) {
+      if (isValidateName && isValidateTel && isValidateTelegram && isChecked) {
         formButton.disabled = false;
 
         const formData = new FormData(form);
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         nameValue = "";
         telValue = "";
-        emailValue = "";
+        telegramValue = "";
         checkboxlValue = "";
         // -------------------------------------------------------------------------
 
@@ -72,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //     nameValue = "";
         //     telValue = "";
-        //     emailValue = "";
+        //     telegramValue = "";
         //     checkboxlValue = "";
         //   }
         // } catch (error) {
@@ -97,10 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
       validation(tel, e.target.value, "tel");
     });
 
-    email.addEventListener("blur", (e) => {
-      emailValue = e.target.value;
+    telegram.addEventListener("blur", (e) => {
+      telegramValue = e.target.value;
 
-      validation(email, e.target.value, "email");
+      validation(telegram, e.target.value, "telegram");
     });
 
     checkbox.addEventListener("change", (e) => {
@@ -110,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // валидация на пробелы
-    [name, email, comment].forEach((item) => {
+    [name, telegram].forEach((item) => {
       item.addEventListener("input", (e) => {
         e.target.value = e.target.value.trim();
       });
@@ -154,15 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      if (rule === "email") {
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
+      if (rule === "telegram") {
         if (value.length < 2) {
           formButton.disabled = true;
-          errorEl.innerText = "Заполните поле";
           wrapper.classList.add("_error");
+          errorEl.innerText = "Заполните поле";
           return false;
-        } else if (!emailPattern.test(value)) {
+        } else if (input.value.includes("X")) {
           formButton.disabled = true;
           wrapper.classList.add("_error");
           errorEl.innerText = "Заполните поле правильно";
