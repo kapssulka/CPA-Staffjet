@@ -1983,6 +1983,11 @@ main {
             flex-direction: column-reverse;
   }
 }
+@media (max-width: 767px) {
+  .contacts__form-wrapper {
+    padding: 40px 24px;
+  }
+}
 .contacts__links {
   display: -webkit-box;
   display: -ms-flexbox;

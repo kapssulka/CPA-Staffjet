@@ -67,6 +67,10 @@
     @media (max-width: 767px) {
       flex-direction: column-reverse;
     }
+
+    @media (max-width: 767px) {
+      padding: 40px 24px;
+    }
   }
 
   &__links {

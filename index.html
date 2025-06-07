@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 
-    <!-- <script src="js/preloader.js" defer></script> -->
+    <script src="js/preloader.js" defer></script>
     <script src="js/index.js" defer></script>
 
     <!-- <script src="js/cookies.js" defer></script> -->
@@ -27,6 +27,83 @@
     <title>StaffJet</title>
   </head>
   <body>
+    <div id="preloader" class="preloader _loading">
+      <img src="./images/logo/logo-preloader.svg" />
+
+      <div class="preloader__inner">
+        <!-- 1 -->
+        <div class="preloader__text-current-01">
+          <div id="percent" class="preloader__text-current">
+            <div class="preloader__text-1">0</div>
+            <div class="preloader__text-2">0</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+
+          <div id="percent" class="preloader__text-next">
+            <div class="preloader__text-1">0</div>
+            <div class="preloader__text-2">1</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="preloader__text-current-01-33">
+          <div id="percent" class="preloader__text-current">
+            <div class="preloader__text-1">0</div>
+            <div class="preloader__text-2">1</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+
+          <div id="percent" class="preloader__text-next">
+            <div class="preloader__text-1">3</div>
+            <div class="preloader__text-2">3</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="preloader__text-current-33-65">
+          <div id="percent" class="preloader__text-current">
+            <div class="preloader__text-1">3</div>
+            <div class="preloader__text-2">3</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+
+          <div id="percent" class="preloader__text-next">
+            <div class="preloader__text-1">6</div>
+            <div class="preloader__text-2">5</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="preloader__text-current-65-99">
+          <div id="percent" class="preloader__text-current">
+            <div class="preloader__text-1">6</div>
+            <div class="preloader__text-2">5</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+
+          <div id="percent" class="preloader__text-next">
+            <div class="preloader__text-1">9</div>
+            <div class="preloader__text-2">9</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="preloader__text-current-100">
+          <div id="percent" class="preloader__text-current">
+            <div class="preloader__text-1">9</div>
+            <div class="preloader__text-2">9</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+
+          <div id="percent" class="preloader__text-next">
+            <div class="preloader__text-1">0</div>
+            <div class="preloader__text-2">0</div>
+            <div class="preloader__text-3">%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="wrapper">
       <div id="js-pop-up" class="pop-up">
         <div class="pop-up__inner">
@@ -72,21 +149,18 @@
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-list-item">
-                <a
-                  target="_blank"
-                  href="https://staffjet.ru/#about-us"
-                  class="header__nav-link"
-                  >О нас</a
+                <a href="#about-us" class="header__nav-link">О нас</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#webmasters" class="header__nav-link">Вебмастерам</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#development-phase" class="header__nav-link"
+                  >Этапы работы</a
                 >
               </li>
               <li class="header__nav-list-item">
-                <a href="#" class="header__nav-link">Вебмастерам</a>
-              </li>
-              <li class="header__nav-list-item">
-                <a href="#" class="header__nav-link">Этапы работы</a>
-              </li>
-              <li class="header__nav-list-item">
-                <a href="#" class="header__nav-link">Контакты</a>
+                <a href="#contacts" class="header__nav-link">Контакты</a>
               </li>
             </ul>
 
@@ -100,7 +174,7 @@
                 >
               </li>
               <li class="header__nav-list-item">
-                <a href="#" class="header__nav-link">Оставить заявку</a>
+                <a href="#contacts" class="header__nav-link">Оставить заявку</a>
               </li>
             </ul>
           </nav>
@@ -256,7 +330,7 @@
           </div>
         </section>
 
-        <section class="about-us">
+        <section id="about-us" class="about-us">
           <div class="about-us__inner _container">
             <!-- TITLE BLOCK -->
             <div class="title-block -900 fade-in-hiro-title">
@@ -411,7 +485,7 @@
           </picture>
         </section>
 
-        <section class="webmasters">
+        <section id="webmasters" class="webmasters">
           <div class="webmasters__inner _container">
             <!-- TITLE BLOCK -->
             <div class="title-block -900 fade-in-hiro-title">
@@ -554,7 +628,7 @@
           </picture>
         </section>
 
-        <section class="development-phase">
+        <section id="development-phase" class="development-phase">
           <div class="development-phase__inner _container">
             <!-- TITLE BLOCK -->
             <div class="title-block -900 fade-in-hiro-title">
@@ -586,7 +660,7 @@
                   </p>
 
                   <!-- BUTTON COMPONENT -->
-                  <a href="#" class="button item-phase__button">
+                  <a href="#contacts" class="button item-phase__button">
                     <div class="button__text">Оставить заявку</div>
                   </a>
                 </div>
@@ -645,7 +719,7 @@
                   </p>
 
                   <!-- BUTTON COMPONENT -->
-                  <a href="#" class="button item-phase__button">
+                  <a href="#contacts" class="button item-phase__button">
                     <div class="button__text">Оставить заявку</div>
                   </a>
                 </div>
@@ -701,7 +775,7 @@
                   </p>
 
                   <!-- BUTTON COMPONENT -->
-                  <a href="#" class="button item-phase__button">
+                  <a href="#contacts" class="button item-phase__button">
                     <div class="button__text">Оставить заявку</div>
                   </a>
                 </div>
@@ -745,7 +819,7 @@
           </picture>
         </section>
 
-        <section class="contacts">
+        <section id="contacts" class="contacts">
           <div class="contacts__inner _container">
             <!-- TITLE BLOCK -->
             <div class="title-block -900 fade-in-hiro-title">
@@ -977,30 +1051,25 @@
                 <div class="footer-nav-block__subtitle">Навигация</div>
                 <ul class="footer-nav-block__list">
                   <li>
-                    <a
-                      target="_blank"
-                      href="https://staffjet.ru/#about-us"
-                      class="footer-nav-block__link"
-                      >О нас</a
-                    >
+                    <a href="#about-us" class="footer-nav-block__link">О нас</a>
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#webmasters"
                       class="footer-nav-block__link js-hide-fixed-header"
                       >Вебмастерам</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#development-phase"
                       class="footer-nav-block__link js-hide-fixed-header"
                       >Этапы работы</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#contacts"
                       class="footer-nav-block__link js-hide-fixed-header"
                       >Контакты</a
                     >
@@ -1009,7 +1078,12 @@
                     <a href="#" class="footer-nav-block__link">Войти</a>
                   </li>
                   <li>
-                    <a href="#" class="footer-nav-block__link">Клиентам</a>
+                    <a
+                      target="_blank"
+                      href="https://staffjet.ru/"
+                      class="footer-nav-block__link"
+                      >Клиентам</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -1050,10 +1124,12 @@
           </div>
 
           <div class="footer__bottom">
-            <img
-              class="footer__bottom-img"
-              src="./images/logo/footer-bg-logo.png"
-            />
+            <a href="/">
+              <img
+                class="footer__bottom-img"
+                src="./images/logo/footer-bg-logo.png"
+              />
+            </a>
 
             <div class="footer__bottom-content">
               <div class="footer__bottom-copyright">
