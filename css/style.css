@@ -621,14 +621,9 @@ main {
 .header__nav-link {
   position: relative;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 110%;
   letter-spacing: -2%;
-}
-@media (max-width: 1440px) {
-  .header__nav-link {
-    font-size: 16px;
-  }
 }
 @media (max-width: 1150px) {
   .header__nav-link {
@@ -1656,10 +1651,6 @@ main {
   padding: 16px;
   background-color: #fff;
 }
-.webmasters__card:hover .webmasters__card_img img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
 .webmasters__card_img {
   overflow: hidden;
   max-width: 100%;
@@ -1812,14 +1803,6 @@ main {
     grid-column: 1/2;
     grid-row: 1;
   }
-}
-.item-phase:hover .item-phase__icon {
-  background-color: #b5c9fa;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.item-phase:hover .item-phase__icon._orange {
-  background-color: rgba(255, 90, 0, 0.3);
 }
 .item-phase__first-block {
   padding-top: 20px;

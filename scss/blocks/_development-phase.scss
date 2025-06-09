@@ -90,16 +90,6 @@
     }
   }
 
-  &:hover &__icon {
-    background-color: #b5c9fa;
-
-    transform: scale(1.2);
-
-    &._orange {
-      background-color: rgba($color: #ff5a001a, $alpha: 0.3);
-    }
-  }
-
   &__first-block {
     padding-top: 20px;
 

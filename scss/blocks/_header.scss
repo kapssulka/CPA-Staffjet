@@ -120,13 +120,10 @@
   &__nav-link {
     position: relative;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 110.00000000000001%;
     letter-spacing: -2%;
 
-    @media (max-width: 1440px) {
-      font-size: 16px;
-    }
     @media (max-width: 1150px) {
       font-size: 14px;
     }
