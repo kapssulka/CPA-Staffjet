@@ -22,6 +22,7 @@
     <script src="js/validation.js" defer></script>
     <script type="module" src="js/phoneMask.js" defer></script>
 
+    <script src="js/animation.js" defer></script>
     <script type="module" src="js/smothScroll.js" defer></script>
 
     <title>StaffJet</title>
@@ -327,18 +328,18 @@
         <section id="about-us" class="about-us">
           <div class="about-us__inner _container">
             <!-- TITLE BLOCK -->
-            <div class="title-block -900 fade-in-hiro-title">
+            <div class="title-block">
               <div class="section-name fade-in-hiro-sub-title">
                 <span class="section-name__text">О нас</span>
               </div>
 
-              <h2 class="section-title">
+              <h2 class="section-title fade-in-animation-about-us-title">
                 Мы говорим не только словами <br />— наши результаты
                 <span class="_color-blue">подтверждены</span> цифрами
               </h2>
             </div>
 
-            <div class="about-us__text">
+            <div class="about-us__text fade-in-animation-about-us-text">
               <p>
                 Каждый показатель — это результат работы с реальными
                 вебмастерами. Мы растём, потому что создаём ценность и делаем
@@ -346,7 +347,7 @@
               </p>
             </div>
 
-            <div class="about-us__cards">
+            <div class="about-us__cards fade-in-animation-about-cards">
               <!-- ITEM -->
               <div class="about-us__card">
                 <div class="about-us__card_icon">
@@ -472,7 +473,7 @@
               srcset="./images/background/about-us/about-us-bg-1024.png"
             />
             <img
-              class="about-us__bg-img fade-in-hiro-bg"
+              class="about-us__bg-img bg-scale-animation"
               src="./images/background/about-us/about-us-bg.png"
               alt="Фоновое изображение"
             />
@@ -482,7 +483,7 @@
         <section id="webmasters" class="webmasters">
           <div class="webmasters__inner _container">
             <!-- TITLE BLOCK -->
-            <div class="title-block -900 fade-in-hiro-title">
+            <div class="title-block">
               <div class="section-name fade-in-hiro-sub-title">
                 <span class="section-name__text">Вебмастерам</span>
               </div>
@@ -615,7 +616,7 @@
               srcset="./images/background/webmasters/webmasters-bg-1024.png"
             />
             <img
-              class="webmasters__bg-img fade-in-hiro-bg"
+              class="webmasters__bg-img bg-scale-animation"
               src="./images/background/webmasters/webmasters-bg.png"
               alt="Фоновое изображение"
             />
@@ -625,7 +626,7 @@
         <section id="development-phase" class="development-phase">
           <div class="development-phase__inner _container">
             <!-- TITLE BLOCK -->
-            <div class="title-block -900 fade-in-hiro-title">
+            <div class="title-block">
               <div class="section-name fade-in-hiro-sub-title">
                 <span class="section-name__text">Этапы работы</span>
               </div>
@@ -638,7 +639,9 @@
 
             <div class="development-phase__content">
               <!-- ITEM -->
-              <div class="development-phase__item item-phase _reverse">
+              <div
+                class="development-phase__item item-phase fade-in-item-phase _reverse"
+              >
                 <div class="item-phase__first-block">
                   <div class="item-phase__icon">
                     <img
@@ -669,7 +672,9 @@
                 </div>
               </div>
               <!-- ITEM -->
-              <div class="development-phase__item item-phase">
+              <div
+                class="development-phase__item item-phase fade-in-item-phase"
+              >
                 <div class="item-phase__first-block">
                   <div class="item-phase__icon _orange">
                     <img src="./images/development-phase/icons/messages.svg" />
@@ -696,7 +701,9 @@
                 </div>
               </div>
               <!-- ITEM -->
-              <div class="development-phase__item item-phase _reverse">
+              <div
+                class="development-phase__item item-phase fade-in-item-phase _reverse"
+              >
                 <div class="item-phase__first-block">
                   <div class="item-phase__icon">
                     <img src="./images/development-phase/icons/cards.svg" />
@@ -728,7 +735,9 @@
                 </div>
               </div>
               <!-- ITEM -->
-              <div class="development-phase__item item-phase">
+              <div
+                class="development-phase__item item-phase fade-in-item-phase"
+              >
                 <div class="item-phase__first-block">
                   <div class="item-phase__icon _orange">
                     <img src="./images/development-phase/icons/monitor.svg" />
@@ -753,7 +762,9 @@
                 </div>
               </div>
               <!-- ITEM -->
-              <div class="development-phase__item item-phase _reverse">
+              <div
+                class="development-phase__item item-phase fade-in-item-phase _reverse"
+              >
                 <div class="item-phase__first-block">
                   <div class="item-phase__icon">
                     <img
@@ -806,7 +817,7 @@
               "
             />
             <img
-              class="development-phase__bg-img fade-in-hiro-bg"
+              class="development-phase__bg-img bg-scale-animation"
               src="./images/background/development-phase/development-phase-bg.png"
               alt="Фоновое изображение"
             />
@@ -816,7 +827,7 @@
         <section id="contacts" class="contacts">
           <div class="contacts__inner _container">
             <!-- TITLE BLOCK -->
-            <div class="title-block -900 fade-in-hiro-title">
+            <div class="title-block">
               <div class="section-name fade-in-hiro-sub-title">
                 <span class="section-name__text">Контакты</span>
               </div>
@@ -828,7 +839,7 @@
               </h2>
             </div>
 
-            <div class="contacts__content">
+            <div class="contacts__content fade-in-contacts">
               <div class="contacts__partner partner-contacs">
                 <h3 class="partner-contacs__title">
                   Становись партнёром <br />
@@ -1019,7 +1030,7 @@
               srcset="./images/background/contacts/contacts-bg-1024.png"
             />
             <img
-              class="contacts__bg-img fade-in-hiro-bg"
+              class="contacts__bg-img bg-scale-animation"
               src="./images/background/contacts/contacts-bg.png"
               alt="Фоновое изображение"
             />
