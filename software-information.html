@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+    <script src="js/index.js" defer></script>
+
+    <script src="js/cookies.js" defer></script>
+
+    <script type="module" src="js/smothScroll.js" defer></script>
+
+    <title>StaffJet: Необходимые сведения о ПО</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="cookies-banner" class="cookies">
+        <div class="cookies__title">Мы используем cookies 🍪</div>
+        <div class="cookies__text">
+          Продолжая пользоваться сайтом, вы соглашаетесь с нашей
+          <a href="/privacy-policy.html">политикой обработки данных.</a>
+        </div>
+        <button id="accept-cookies" class="cookies__button">Хорошо</button>
+      </div>
+      <header id="js-header" class="header">
+        <div class="header__inner _container">
+          <a href="/">
+            <img
+              src="./images/logo/logo-color.svg"
+              alt="Logo"
+              class="header__logo"
+            />
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a href="/#about-us" class="header__nav-link">О нас</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="/#webmasters" class="header__nav-link">Вебмастерам</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="/#development-phase" class="header__nav-link"
+                  >Этапы работы</a
+                >
+              </li>
+              <li class="header__nav-list-item">
+                <a href="/#contacts" class="header__nav-link">Контакты</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a
+                  target="_blank"
+                  href="https://staffjet.ru/"
+                  class="header__nav-link"
+                  >Рекламодателям</a
+                >
+              </li>
+            </ul>
+
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a
+                  target="_blank"
+                  href="https://t.me/manager_staffjet"
+                  class="header__nav-link"
+                  >Написать в Telegram</a
+                >
+              </li>
+              <li class="header__nav-list-item">
+                <a href="/#contacts" class="header__nav-link"
+                  >Оставить заявку</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- burger -->
+          <div id="js-burger" class="burger">
+            <div class="burger__inner">
+              <span></span>
+            </div>
+          </div>
+
+          <nav id="js-burger-nav" class="burger-nav">
+            <div class="burger-nav__header">
+              <img src="./images/logo/logo-white.svg" />
+            </div>
+            <div class="burger-nav__items">
+              <ul class="burger-nav__list">
+                <li>
+                  <a class="burger-nav__link" href="/#about-us"
+                    >О нас <span>(01)</span></a
+                  >
+                </li>
+                <li>
+                  <a class="burger-nav__link" href="/#webmasters"
+                    >Вебмастерам<span>(02)</span></a
+                  >
+                </li>
+                <li>
+                  <a class="burger-nav__link" href="/#development-phase"
+                    >Этапы работы<span>(03)</span></a
+                  >
+                </li>
+                <li>
+                  <a class="burger-nav__link" href="/#contacts"
+                    >Контакты<span>(04)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="burger-nav__link"
+                    target="_blank"
+                    href="https://staffjet.ru/"
+                    >Рекламодателям<span>(05)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    class="burger-nav__link"
+                    href="https://t.me/manager_staffjet"
+                    >Написать в Telegram<span>(06)</span></a
+                  >
+                </li>
+                <li>
+                  <a class="burger-nav__link" href="/#contacts"
+                    >Оставить заявку<span>(07)</span></a
+                  >
+                </li>
+              </ul>
+
+              <img
+                class="burger-nav__bg-img"
+                src="./images/logo/burger-bg-logo.png"
+              />
+            </div>
+
+            <div class="burger-nav__footer">
+              © 2018 — 2025 Staffjet. Все права защищены.
+            </div>
+          </nav>
+        </div>
+        <div class="fade-in-hiro-header"></div>
+      </header>
+
+      <main class="main">
+        <section class="policy _container">
+          <a href="/" class="back-to">
+            <img src="./images/icons/back-arrow.svg" />
+            Назад
+          </a>
+
+          <h1 class="policy__title">
+            Необходимые <br />
+            сведения о <span id="color-blue">ПО</span>
+          </h1>
+
+          <div class="policy__content">
+            <div class="policy__text-wrapper">
+              <h4 class="policy__sub-title">О продукте</h4>
+
+              <p class="policy__text">
+                Staffjet - это инновационное решение массового подбора персонала
+                в сфере HR. Наша команда ежедневно усердно работает чтобы
+                понизить стоимость и увеличить скорость, сохраняя качество
+                рекрутмента. Благодаря нашей автоматизированной платформе все
+                этапы возможно отслеживать онлайн. Программа работает из
+                браузера Google Chrome, Firefox, Opera и Safari
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <h4 class="policy__sub-title">Классификация ПО «Staffjet»:</h4>
+              <p id="bold">Раздел:</p>
+              <p class="policy__text">
+                Информационные системы для решения специфических отраслевых
+                задач
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <p id="bold">Основной класс: 05.15</p>
+              <p class="policy__text">
+                Информационные системы для решения специфических отраслевых
+                задач
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <p id="bold">Дополнительный класс: 62</p>
+              <p class="policy__text">
+                Продукты программные и услуги по разработке программного
+                обеспечения; консультационные и аналогичные услуги в области
+                информационных технологий
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <p id="bold">58.29.29</p>
+              <p class="policy__text">
+                Обеспечение программное прикладное прочее на электронном
+                носителе
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <h4 class="policy__sub-title">
+                Сведения о правообладателе ПО «Staffjet»:
+              </h4>
+
+              <p class="policy__text">
+                Общество с ограниченной ответственностью «СТАФФДЖЕТ» (ООО
+                «СТАФФДЖЕТ») Юридический адрес: 236010, Калининградская обл., г.
+                Калининград, ул. Ленинский просп., 30, офис 5, 7 <br />
+                ИНН: 3906366063 <br />
+                КПП: 390601001 <br />
+                ОГРН: 1183926006978
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <p>
+                Сайт:
+                <a class="policy__link" href="www.staffjet.ru"
+                  >www.staffjet.ru</a
+                >
+              </p>
+              <p>
+                Электронная почта:
+                <a class="policy__link" href="mailto:job@staffjet.ru"
+                  >job@staffjet.ru</a
+                >
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <h4 class="policy__sub-title">
+                Сведения о государственной регистрации ПО «Staffjet»
+              </h4>
+
+              <p class="policy__text">
+                Номер: 2018665762 <br />
+                Дата регистрации: 11.12.2018
+              </p>
+            </div>
+
+            <div class="policy__text-wrapper">
+              <h4 class="policy__sub-title">Документация и ценовая политика</h4>
+
+              <ul class="policy__list-marker">
+                <li>
+                  <a
+                    class="policy__link"
+                    download="Документация_содержащая_описание_функциональных_характеристик_ПО.docx"
+                    href="./downloads/documents/general_management.docx"
+                    >Общее руководство по установке и эксплуатации демо-версии
+                    ПО «Staffjet»</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="policy__link"
+                    download="Документация_содержащая_описание_процессов,_обеспечивающих_поддержание.docx"
+                    href="./downloads/documents/process_support.docx"
+                    >Описание процессов жизненного цикла</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="policy__link"
+                    download="Инструкция_по_установке_экземпляра_программного_обеспечения.docx"
+                    href="./downloads/documents/software_install.docx"
+                    >Инструкция по установке экземпляра программного
+                    обеспечения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="policy__link"
+                    download="Ценовая_политика.docx"
+                    href="./downloads/documents/pricing_policy.docx"
+                    >Ценовая политика</a
+                  >
+                </li>
+              </ul>
+
+              <p class="policy__text">
+                ПО «Staffjet» — решение SaaS (Software as a Service). Доступ к
+                полной версии ПО «Staffjet» предоставляется путем создания
+                личного кабинета на сайте правообладателя и использования
+                программного обеспечения, установленного на сервере
+                правообладателя.
+              </p>
+
+              <p class="policy__text">
+                Вы можете ознакомиться с основными функциями ПО «Staffjet»,
+                установив демо-версию ПО «Staffjet» и используя Общее
+                руководство по установке и эксплуатации демо-версии ПО
+                «Staffjet». Скачать демо-версию ПО «Staffjet».
+              </p>
+
+              <p class="policy__text">
+                Ознакомиться с полной функциональностью ПО «Staffjet» можно по
+                адресу
+                <a
+                  class="policy__link"
+                  target="_blank"
+                  href="https://bit.ly/2QODuyk"
+                  >https://bit.ly/2QODuyk</a
+                >. Полный перечень функциональности обсуждается при заключении
+                договора на использование программного обеспечения, информация о
+                тарифах доступна на staffjet.ru
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="_container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <a href="/">
+                <img src="./images/logo/logo-white.svg" alt="Logo" />
+              </a>
+              <p class="footer__top-left_text">
+                Работайте с качественными офферами и получайте доход за целевые
+                действия без лишних шагов.
+              </p>
+            </div>
+            <div class="footer__top-rigth">
+              <!-- BLOCK -->
+              <div class="footer-nav-block">
+                <div class="footer-nav-block__subtitle">Навигация</div>
+                <ul class="footer-nav-block__list">
+                  <li>
+                    <a href="/#about-us" class="footer-nav-block__link"
+                      >О нас</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/#webmasters" class="footer-nav-block__link"
+                      >Вебмастерам</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/#development-phase" class="footer-nav-block__link"
+                      >Этапы работы</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/#contacts" class="footer-nav-block__link"
+                      >Контакты</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://staffjet.ru/client/user/login/?next=/client/"
+                      class="footer-nav-block__link"
+                      >Войти</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://staffjet.ru/"
+                      class="footer-nav-block__link"
+                      >Рекламодателям</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- BLOCK -->
+              <div class="footer-nav-block">
+                <div class="footer-nav-block__subtitle">Контакты</div>
+                <ul class="footer-nav-block__list">
+                  <li>
+                    <a
+                      href="mailto:info@staffjet.ru"
+                      class="footer-nav-block__link"
+                      >Email</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://t.me/manager_staffjet"
+                      class="footer-nav-block__link"
+                      >Telegram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+79518896673" class="footer-nav-block__link"
+                      >+7 (951) 889 66 73</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/#contacts" class="footer-nav-block__link"
+                      >Оставить заявку</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <a href="/">
+              <img
+                class="footer__bottom-img"
+                src="./images/logo/footer-bg-logo.png"
+              />
+            </a>
+
+            <div class="footer__bottom-content">
+              <div class="footer__bottom-copyright">
+                © 2018 — 2025 Staffjet. Все права защищены.
+              </div>
+              <div class="footer__bottom-legal">
+                <a
+                  href="./privacy-policy.html"
+                  class="footer__bottom-legal-item"
+                  >Политика конфиденциальности</a
+                >
+                <a
+                  href="./user-agreement.html"
+                  class="footer__bottom-legal-item"
+                  >Пользовательское Соглашение</a
+                >
+                <a
+                  href="./software-information.html"
+                  class="footer__bottom-legal-item"
+                  >Необходимые сведения о ПО</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

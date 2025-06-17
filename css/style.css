@@ -2658,3 +2658,123 @@ main {
   color: #787878;
   max-width: 345px;
 }
+
+.policy {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .policy {
+    margin-top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .policy {
+    margin-bottom: 80px;
+  }
+}
+.policy__title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  margin: 40px 0;
+}
+.policy__title #color-blue {
+  color: #3253ed;
+}
+@media (max-width: 600px) {
+  .policy__title {
+    font-size: 32px;
+  }
+}
+.policy__sub-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: -1.5%;
+}
+.policy__text-wrapper {
+  max-width: 785px;
+}
+.policy__text-wrapper:not(:last-child) {
+  margin-bottom: 60px;
+}
+.policy__text-wrapper p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: -1.5%;
+}
+.policy__text-wrapper p#bold {
+  font-weight: 600;
+}
+.policy__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: -1.5%;
+}
+.policy__text:not(:last-child) {
+  margin-bottom: 32px;
+}
+.policy__text #bold {
+  font-weight: 600;
+}
+.policy__link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: -1.5%;
+  color: #3253ed;
+}
+.policy__link:hover {
+  text-decoration: underline;
+}
+.policy__list-item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: -1.5%;
+}
+.policy__list-marker {
+  margin-bottom: 32px;
+}
+.policy__list-marker li {
+  position: relative;
+  padding-left: 20px;
+}
+.policy__list-marker li a {
+  font-weight: 600;
+}
+.policy__list-marker li::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #3253ed;
+}
+
+.back-to {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #535862;
+}
+.back-to:hover {
+  text-decoration: underline;
+}
+.back-to img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
